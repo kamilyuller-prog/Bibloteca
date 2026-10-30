@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Virtual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" aria-label="Página inicial">Biblioteca</a>
+    <nav class="account-links">
+      <a href="#" id="loginLink">Entrar</a>
+      <a class="button button-dark" href="#" id="signupLink">Criar conta</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">SEU PRÓXIMO CAPÍTULO COMEÇA AQUI</p>
+        <h1>Escolha o seu livro<span>.</span></h1>
+        <p class="subtitle">Descubra histórias, explore novos mundos e encontre sua próxima leitura.</p>
+      </div>
+      <div class="welcome-mark" aria-hidden="true">📚</div>
+    </section>
+
+    <section class="catalog-layout">
+      <div class="catalog">
+        <div class="section-heading">
+          <div>
+            <h2>Livros disponíveis</h2>
+            <p class="muted">Encontre uma leitura para chamar de sua.</p>
+          </div>
+          <label class="search">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Buscar livro ou autor..."
+              aria-label="Buscar livro ou autor">
+          </label>
+        </div>
+
+        <div class="book-grid" id="bookGrid">
+          <article class="book-card" data-title="O Pequeno Príncipe" data-author="Antoine de Saint-Exupéry"
+            data-category="Aventura">
+            <button class="cover cover-prince" data-book="prince" aria-label="Ver O Pequeno Príncipe">
+              <span class="cover-stars">✦ &nbsp; · &nbsp; ✧</span>
+              <span class="cover-planet">🪐</span>
+              <strong>O Pequeno<br>Príncipe</strong>
+              <small>ANTOINE DE SAINT-EXUPÉRY</small>
+            </button>
+            <div class="book-info"><span class="tag">Aventura</span>
+              <h3>O Pequeno Príncipe</h3>
+              <p>Antoine de Saint-Exupéry</p><button class="text-button" data-book="prince">Ver detalhes
+                <span>→</span></button>
+            </div>
+          </article>
+
+          <article class="book-card" data-title="Noites brancas" data-author="Fiódor Dostoiévski"
+            data-category="Romance">
+            <button class="cover cover-nights" data-book="nights" aria-label="Ver Noites brancas"><span
+                class="cover-moon">☾</span><strong>Noites<br>brancas</strong><small>FIÓDOR DOSTOIÉVSKI</small></button>
+            <div class="book-info"><span class="tag tag-lilac">Romance</span>
+              <h3>Noites brancas</h3>
+              <p>Fiódor Dostoiévski</p><button class="text-button" data-book="nights">Ver detalhes
+                <span>→</span></button>
+            </div>
+          </article>
+
+          <article class="book-card" data-title="Metamorfose" data-author="Franz Kafka"
+            data-category="Literatura clássica">
+            <button class="cover cover-metamorphosis" data-book="metamorphosis" aria-label="Ver Metamorfose"><span
+                class="cover-line"></span><strong>METAMORFOSE</strong><small>FRANZ KAFKA</small></button>
+            <div class="book-info"><span class="tag tag-green">Clássico</span>
+              <h3>Metamorfose</h3>
+              <p>Franz Kafka</p><button class="text-button" data-book="metamorphosis">Ver detalhes
+                <span>→</span></button>
+            </div>
+          </article>
+
+          <article class="book-card" data-title="Harry Potter e o Cálice de Fogo" data-author="J. K. Rowling"
+            data-category="Aventura">
+            <button class="cover cover-harry" data-book="harry" aria-label="Ver Harry Potter e o Cálice de Fogo"><span
+                class="cover-light">✦</span><strong>HARRY POTTER<br><small>E O CÁLICE DE FOGO</small></strong><span
+                class="cover-cup">♜</span></button>
+            <div class="book-info"><span class="tag">Aventura</span>
+              <h3>Harry Potter: e o Cálice de Fogo</h3>
+              <p>J. K. Rowling</p><button class="text-button" data-book="harry">Ver detalhes <span>→</span></button>
+            </div>
+          </article>
+
+          <article class="book-card" data-title="Como fazer amigos e influenciar pessoas" data-author="Dale Carnegie"
+            data-category="Desenvolvimento pessoal">
+            <button class="cover cover-friends" data-book="friends"
+              aria-label="Ver Como fazer amigos e influenciar pessoas"><span class="cover-sun">◉</span><strong>Como
+                fazer<br>amigos e influenciar<br>pessoas</strong><small>DALE CARNEGIE</small></button>
+            <div class="book-info"><span class="tag tag-green">Desenvolvimento</span>
+              <h3>Como fazer amigos e influenciar pessoas</h3>
+              <p>Dale Carnegie</p><button class="text-button" data-book="friends">Ver detalhes <span>→</span></button>
+            </div>
+          </article>
+        </div>
+        <p id="emptyState" class="empty-state" hidden>Nenhum livro encontrado. Tente outra busca.</p>
+      </div>
+
+      <aside class="sidebar">
+        <div class="side-heading">
+          <div>
+            <h2>Empréstimos recentes</h2>
+            <p class="muted">Continue de onde parou.</p>
+          </div><span class="round-icon">↗</span>
+        </div>
+        <div class="loan-list">
+          <div class="loan-item"><span class="avatar avatar-purple">MS</span>
+            <div><strong>Meditações</strong>
+              <p>Mariana da Silva</p><span class="loan-status">Em andamento</span>
+            </div>
+          </div>
+          <div class="loan-item"><span class="avatar avatar-orange">JC</span>
+            <div><strong>Harry Potter: e o Cálice de Fogo</strong>
+              <p>Josefina Carvalho de Oliveira</p><span class="loan-status">Em andamento</span>
+            </div>
+          </div>
+          <div class="loan-item"><span class="avatar avatar-blue">JC</span>
+            <div><strong>Como fazer amigos e influenciar pessoas</strong>
+              <p>José Carlos</p><span class="loan-status">Devolução em breve</span>
+            </div>
+          </div>
+        </div>
+        <button class="all-loans" id="loansButton">Ver todos os empréstimos <span>→</span></button>
+        <div class="quote-card"><span class="quote-mark">“</span>
+          <p>Um livro é um sonho que você segura nas mãos.</p><small>— Neil Gaiman</small>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="bookModal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Fechar">×</button>
+      <div class="modal-book-cover cover cover-prince" id="modalCover"><span class="cover-stars">✦ &nbsp; · &nbsp;
+          ✧</span><span class="cover-planet">🪐</span><strong>O Pequeno<br>Príncipe</strong><small>ANTOINE DE
+          SAINT-EXUPÉRY</small></div>
+      <div class="modal-content">
+        <p class="eyebrow">SOBRE ESSE LIVRO</p>
+        <span class="tag" id="modalCategory">Aventura · Literatura clássica</span>
+        <h2 id="modalTitle">O Pequeno Príncipe</h2>
+        <p class="author-line" id="modalAuthor">Por: Antoine de Saint-Exupéry</p>
+        <div class="rating"><span>★★★★★</span> <strong>5.0</strong> <small>Avaliação por leitores</small></div>
+        <p class="description" id="modalDescription">O livro O Pequeno Príncipe, escrito por Antoine de Saint-Exupéry em
+          1943, conta a história de um piloto de avião que sofre uma pane e cai no deserto do Saara. Lá, ele conhece um
+          menino loiro e misterioso vindo de um pequeno asteroide, o B-612.</p>
+        <div class="book-facts">
+          <div><small>Páginas</small><strong id="modalPages">96</strong></div>
+          <div><small>Publicação</small><strong id="modalYear">1943</strong></div>
+          <div><small>Idioma</small><strong>Português</strong></div>
+        </div>
+        <p class="available"><span></span> Disponível para empréstimo</p>
+        <button class="button button-primary" id="borrowButton">Emprestar livro <span>→</span></button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast-backdrop" id="successModal" hidden>
+    <section class="success-card" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+      <button class="modal-close" id="closeSuccess" aria-label="Fechar">×</button>
+      <div class="success-check">✓</div>
+      <p class="eyebrow">TUDO CERTO!</p>
+      <h2 id="successTitle">Empréstimo realizado com sucesso.</h2>
+      <p class="muted">Aproveite sua leitura e cuide bem do livro.</p>
+      <div class="receipt">
+        <div class="receipt-cover cover cover-prince"><span class="cover-planet">🪐</span><strong>O
+            Pequeno<br>Príncipe</strong></div>
+        <div><strong id="receiptTitle">O Pequeno Príncipe</strong>
+          <p id="receiptAuthor">Antoine de Saint-Exupéry</p><small id="receiptDate"></small>
+          <p class="receipt-reader">Leitor: Você</p>
+        </div>
+      </div>
+      <button class="button button-primary" id="receiptButton">Baixar comprovante</button>
+      <button class="button button-light" id="continueButton">Continuar explorando</button>
+    </section>
+  </div>
+
+  <footer><span>Biblioteca</span>
+    <p>Conhecimento que aproxima pessoas.</p><small>© 2026 Biblioteca Virtual</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

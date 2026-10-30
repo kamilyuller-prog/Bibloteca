@@ -1,0 +1,15 @@
+BIBLIOTECA VIRTUAL — COMO EXECUTAR
+
+1. Extraia os arquivos do ZIP para uma pasta.
+2. Abra a pasta no Visual Studio Code (ou outro editor).
+3. Abra o arquivo index.html no navegador.
+   Você também pode instalar a extensão "Live Server" no VS Code e clicar em "Go Live".
+
+ARQUIVOS
+- index.html: estrutura da página.
+- style.css: cores, fontes, layout e responsividade.
+- script.js: busca, detalhes do livro, modal de empréstimo e comprovante.
+
+OBSERVAÇÕES
+- O projeto é uma demonstração front-end. Login, criação de conta e empréstimos reais ainda não estão conectados a um banco de dados/servidor.
+- As capas foram feitas com CSS e elementos de texto/emoji como ilustrações provisórias; não são imagens oficiais das capas.
